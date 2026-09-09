@@ -1,0 +1,1237 @@
+/* =========================================
+   STYLE.CSS
+   Portfolio Gustia Nayla
+   Tema: Navy, Biru, Putih Pastel, Abu-abu
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f5f7;
+    color: #263342;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    min-height: 70px;
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #101f35;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    list-style: none;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    display: block;
+
+    padding: 24px 0;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #c8d8e7;
+}
+
+.arrow {
+    font-size: 9px;
+    margin-left: 4px;
+}
+
+
+/* =========================================
+   DROPDOWN ABOUT
+========================================= */
+
+.dropdown-menu {
+    position: absolute;
+
+    top: 68px;
+    left: -15px;
+
+    width: 180px;
+
+    padding: 8px 0;
+
+    background-color: #ffffff;
+
+    list-style: none;
+
+    border: 1px solid #d8dee5;
+    border-radius: 5px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(5px);
+
+    transition: all 0.25s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    padding: 10px 16px;
+
+    color: #263342;
+
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #edf2f6;
+    color: #101f35;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: calc(100vh - 70px);
+
+    padding: 80px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    background-color: #f5f7f9;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   BENTUK ABSTRAK
+========================================= */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: -120px;
+    right: -80px;
+
+    background-color: #d5e1eb;
+
+    border-radius: 48% 52% 60% 40%;
+
+    opacity: 0.75;
+
+    animation: abstrakAtas 8s ease-in-out infinite;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    left: -70px;
+    bottom: -60px;
+
+    background-color: #b8c9d9;
+
+    border-radius: 55% 45% 40% 60%;
+
+    opacity: 0.55;
+
+    animation: abstrakBawah 7s ease-in-out infinite;
+}
+
+
+/* Bentuk tambahan */
+
+.hero-image {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 85px;
+    height: 85px;
+
+    top: -30px;
+    right: -35px;
+
+    background-color: #91a9be;
+
+    border-radius: 50%;
+
+    opacity: 0.55;
+
+    z-index: -1;
+
+    animation: lingkaranKecil 6s ease-in-out infinite;
+}
+
+
+/* =========================================
+   ANIMASI ABSTRAK
+========================================= */
+
+@keyframes abstrakAtas {
+
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-18px, 15px) rotate(7deg);
+    }
+
+    50% {
+        transform: translate(-8px, 28px) rotate(12deg);
+    }
+
+    75% {
+        transform: translate(18px, 12px) rotate(6deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+@keyframes abstrakBawah {
+
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(25px, -18px) rotate(8deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+@keyframes lingkaranKecil {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(12px, -15px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+/* =========================================
+   HERO TEXT
+========================================= */
+
+.hero-text {
+    max-width: 600px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.small-title {
+    margin-bottom: 10px;
+
+    color: #55799b;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+
+    color: #101f35;
+
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #55799b;
+}
+
+.hero-text > p:not(.small-title) {
+    margin-bottom: 25px;
+
+    color: #596777;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.button-group {
+    display: flex;
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 11px 22px;
+
+    color: #ffffff;
+    background-color: #101f35;
+
+    border: 1px solid #101f35;
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #304f70;
+
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    color: #101f35;
+    background-color: transparent;
+
+    border-color: #55799b;
+}
+
+.btn-outline:hover {
+    color: #ffffff;
+    background-color: #101f35;
+}
+
+
+/* =========================================
+   FOTO
+========================================= */
+
+.hero-image {
+    width: 320px;
+    height: 390px;
+
+    padding: 5px;
+
+    position: relative;
+    z-index: 2;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d3dce4;
+    border-radius: 12px;
+
+    box-shadow: 0 10px 25px rgba(16, 31, 53, 0.15);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   INFORMASI
+========================================= */
+
+.info-section {
+    padding: 70px 8%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    background-color: #101f35;
+}
+
+.info-card {
+    padding: 25px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d8dee5;
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.info-card h3 {
+    margin-bottom: 10px;
+
+    color: #101f35;
+
+    font-size: 19px;
+}
+
+.info-card p {
+    margin-bottom: 15px;
+
+    color: #606d7b;
+
+    font-size: 14px;
+}
+
+.info-card a {
+    color: #55799b;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.info-card a:hover {
+    color: #101f35;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.page-header {
+    padding: 70px 8% 55px;
+
+    text-align: center;
+
+    background-color: #101f35;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -70px;
+    top: -90px;
+
+    background-color: #55799b;
+
+    border-radius: 50%;
+
+    opacity: 0.3;
+
+    animation: abstrakAtas 8s ease-in-out infinite;
+}
+
+.page-header .small-title {
+    color: #b9cde0;
+
+    position: relative;
+    z-index: 2;
+}
+
+.page-header h1 {
+    margin-bottom: 12px;
+
+    color: #ffffff;
+
+    font-size: 42px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.page-header p:last-child {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #d6e0e8;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.profile-section {
+    padding: 75px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 55px;
+
+    background-color: #ffffff;
+}
+
+.profile-image {
+    width: 280px;
+    height: 340px;
+
+    padding: 5px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d3dce4;
+    border-radius: 10px;
+
+    box-shadow: 0 8px 20px rgba(16, 31, 53, 0.12);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+}
+
+.profile-text {
+    max-width: 600px;
+}
+
+.profile-text h2 {
+    margin-bottom: 15px;
+
+    color: #101f35;
+
+    font-size: 30px;
+}
+
+.profile-text p {
+    margin-bottom: 12px;
+
+    color: #596777;
+}
+
+
+/* =========================================
+   CONTENT SECTION
+========================================= */
+
+.content-section {
+    padding: 75px 8%;
+
+    background-color: #f3f5f7;
+
+    border-top: 1px solid #dce2e7;
+    border-bottom: 1px solid #dce2e7;
+}
+
+.section-title {
+    margin-bottom: 40px;
+
+    text-align: center;
+}
+
+.section-title h2 {
+    color: #101f35;
+
+    font-size: 30px;
+}
+
+.section-title::after {
+    content: "";
+
+    display: block;
+
+    width: 50px;
+    height: 3px;
+
+    margin: 10px auto 0;
+
+    background-color: #55799b;
+
+    border-radius: 5px;
+}
+
+
+/* =========================================
+   PENDIDIKAN
+========================================= */
+
+.education-list {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.education-item {
+    margin-bottom: 16px;
+
+    padding: 20px 23px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d8dee5;
+    border-left: 4px solid #55799b;
+
+    border-radius: 6px;
+
+    transition: 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateX(4px);
+
+    box-shadow: 0 5px 15px rgba(16, 31, 53, 0.08);
+}
+
+.education-item h3 {
+    margin-bottom: 5px;
+
+    color: #101f35;
+}
+
+.education-item p {
+    color: #606d7b;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   SKILL
+========================================= */
+
+.skill-list {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.skill-item {
+    margin-bottom: 18px;
+
+    padding: 18px 20px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d8dee5;
+    border-radius: 7px;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    color: #101f35;
+
+    font-weight: bold;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+
+    background-color: #dce2e7;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+
+    background-color: #55799b;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   HOBI
+========================================= */
+
+.hobby-container {
+    max-width: 900px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.hobby-card {
+    padding: 25px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d8dee5;
+    border-top: 3px solid #55799b;
+
+    border-radius: 7px;
+
+    transition: 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 7px 18px rgba(16, 31, 53, 0.09);
+}
+
+.hobby-card h3 {
+    margin-bottom: 8px;
+
+    color: #101f35;
+}
+
+.hobby-card p {
+    color: #606d7b;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   CITA-CITA
+========================================= */
+
+.dream-section {
+    padding: 80px 8%;
+
+    text-align: center;
+
+    background-color: #101f35;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.dream-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    left: -100px;
+    top: -80px;
+
+    background-color: #55799b;
+
+    border-radius: 50%;
+
+    opacity: 0.25;
+
+    animation: abstrakBawah 8s ease-in-out infinite;
+}
+
+.dream-section h2 {
+    margin-bottom: 18px;
+
+    color: #ffffff;
+
+    font-size: 34px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.dream-section p {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #d6e0e8;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 70px 8%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    background-color: #f3f5f7;
+}
+
+.contact-info h2 {
+    margin-bottom: 22px;
+
+    color: #101f35;
+
+    font-size: 28px;
+}
+
+.contact-item {
+    margin-bottom: 15px;
+
+    padding: 17px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d8dee5;
+    border-left: 4px solid #55799b;
+
+    border-radius: 6px;
+}
+
+.contact-item h3 {
+    margin-bottom: 4px;
+
+    color: #101f35;
+}
+
+.contact-item p {
+    color: #606d7b;
+
+    font-size: 14px;
+}
+
+.instagram-link,
+.github-link {
+    color: #55799b;
+
+    text-decoration: none;
+
+    word-break: break-word;
+}
+
+.instagram-link:hover,
+.github-link:hover {
+    color: #101f35;
+}
+
+
+/* =========================================
+   CONTACT BUTTON
+========================================= */
+
+.instagram-button,
+.github-button {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    margin-top: 8px;
+    margin-right: 7px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.instagram-button {
+    color: #ffffff;
+
+    background-color: #55799b;
+}
+
+.github-button {
+    color: #ffffff;
+
+    background-color: #101f35;
+}
+
+.instagram-button:hover,
+.github-button:hover {
+    transform: translateY(-2px);
+}
+
+.instagram-button:hover {
+    background-color: #3f6384;
+}
+
+.github-button:hover {
+    background-color: #294968;
+}
+
+
+/* =========================================
+   FORM CONTACT
+========================================= */
+
+.contact-form {
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d8dee5;
+    border-top: 3px solid #55799b;
+
+    border-radius: 7px;
+
+    box-shadow: 0 5px 18px rgba(16, 31, 53, 0.07);
+}
+
+.contact-form label {
+    margin-bottom: 6px;
+
+    color: #263342;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 11px 13px;
+
+    margin-bottom: 17px;
+
+    background-color: #f7f8fa;
+
+    color: #263342;
+
+    border: 1px solid #d1d9e1;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    transition: 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background-color: #ffffff;
+
+    border-color: #55799b;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 11px 18px;
+
+    color: #ffffff;
+
+    background-color: #101f35;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #304f70;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    min-height: 70px;
+
+    padding: 20px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background-color: #101f35;
+
+    border-top: 2px solid #55799b;
+}
+
+footer p {
+    color: #d6e0e8;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding: 70px 6%;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .button-group {
+        justify-content: center;
+    }
+
+    .info-section {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding: 60px 6%;
+    }
+
+    .profile-section {
+        padding: 65px 6%;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+
+        padding: 60px 6%;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE HP
+========================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 14px 5%;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .nav-menu {
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .nav-menu a {
+        padding: 5px 0;
+
+        font-size: 14px;
+    }
+
+    .dropdown-menu {
+        top: 32px;
+
+        left: 50%;
+
+        transform: translate(-50%, 5px);
+    }
+
+    .dropdown:hover .dropdown-menu {
+        transform: translate(-50%, 0);
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding: 60px 5%;
+
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-text > p:not(.small-title) {
+        font-size: 15px;
+    }
+
+    .hero-image {
+        width: 270px;
+        height: 330px;
+    }
+
+    .info-section {
+        grid-template-columns: 1fr;
+
+        padding: 50px 5%;
+    }
+
+    .page-header {
+        padding: 55px 5% 45px;
+    }
+
+    .page-header h1 {
+        font-size: 34px;
+    }
+
+    .profile-section {
+        padding: 55px 5%;
+    }
+
+    .profile-image {
+        width: 250px;
+        height: 310px;
+    }
+
+    .content-section {
+        padding: 55px 5%;
+    }
+
+    .hobby-container {
+        grid-template-columns: 1fr;
+    }
+
+    .dream-section {
+        padding: 65px 5%;
+    }
+
+    .dream-section h2 {
+        font-size: 29px;
+    }
+
+    .contact-container {
+        padding: 50px 5%;
+    }
+
+    .instagram-button,
+    .github-button {
+        width: 100%;
+
+        margin-right: 0;
+
+        margin-bottom: 8px;
+
+        text-align: center;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+}
